@@ -26,6 +26,10 @@
 
 ---
 
+> NOTE: only 1 pr will be accepted per user !
+
+---
+
 ## Steps For Contribution
 
     1. Fork this repo
