@@ -31,6 +31,7 @@
     1. Fork this repo
     2. Star this repo
     3. Add a file (any useful program) inside its respective language
+    (if folder is not available for your language then create it by yourself)
     4. commit the code
     5. Make pull request
 
