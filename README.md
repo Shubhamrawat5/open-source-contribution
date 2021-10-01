@@ -26,10 +26,6 @@
 
 ---
 
-> NOTE: only 1 pr will be accepted per user !
-
----
-
 ## Steps For Contribution
 
     1. Fork this repo
@@ -44,7 +40,7 @@
 ## :handshake: Our Contributors
 
 <a href="https://github.com/Shubhamrawat5/open-source-contribution/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Shubhamrawat5/open-source-contribution" />
+  <img src="https://contrib.rocks/image?repo=shubhamrawat5/open-source-contribution" />
 </a>
 
 <h2 align="center">
