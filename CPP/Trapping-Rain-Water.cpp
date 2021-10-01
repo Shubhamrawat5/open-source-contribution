@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void TrappingRainWater(int arr[], int n){
+void TrappingRainWater(int arr[], int n){   // Function
 
 int result = 0;
 
@@ -21,25 +21,18 @@ int result = 0;
         {
             left = max(left,arr[j]);
         }
-
         
-
-        result = result + (min(left,right) - arr[i]);
-
-
+        result = result + (min(left,right) - arr[i]); // Calculating Result
     }
     
     cout<< result ;
-
-
 }
-
 
 int main()
 {   int arr[] = {0,1,0,2,1,0,1,3,2,1,2,1};
 
     int n = sizeof(arr)/sizeof(arr[0]);
 
-    TrappingRainWater(arr,n);    
+    TrappingRainWater(arr,n);  // Function Call  
     return 0;
 }
