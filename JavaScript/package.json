@@ -1,0 +1,28 @@
+{
+  "name": "randomy",
+  "version": "1.0.0",
+  "description": "A Simple API That Sends Random Tweets From MR.NAVAL RAVIKANT TWEET-STORM",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "random-status-lines": "^1.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankaj-kb/Randomy.git"
+  },
+  "author": "pankaj-kb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pankaj-kb/Randomy/issues"
+  },
+  "homepage": "https://github.com/pankaj-kb/Randomy#readme",
+  "engines": {
+    "node": "14.17.0"
+  }
+}
