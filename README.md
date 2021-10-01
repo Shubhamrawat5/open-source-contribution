@@ -50,7 +50,7 @@ JOIN OUR WHATSAPP GROUP: https://chat.whatsapp.com/EnrPJcdDxw16NcHOV6wrJY
 ## :handshake: Our Contributors
 
 <a href="https://github.com/Shubhamrawat5/open-source-contribution/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=shubhamrawat5/open-source-contribution" />
+  <img src="https://contrib.rocks/image?repo=Shubhamrawat5/open-source-contribution&max=99" />
 </a>
 
 <h2 align="center">
