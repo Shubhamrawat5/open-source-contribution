@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    int arr[] = {10, 222, 30, 4, 99};
+    int arr[] = {10, 222, 30, 4, 99, 55, 144, 551};
     int size = sizeof arr / sizeof arr[0];
     cout << "size is " << size << endl;
     sort(arr, arr + size);
@@ -17,9 +17,11 @@ int main()
         cout << arr[i] << " "
              << "\n";
     }
-    if (binary_search(arr, arr + size, 55))
+    int it= lower_bound(arr, arr + size, 55)-arr;
+    
+    if (arr[it]==55)
     {
-        cout << "present";
+        cout << "present at "<<it;
     }
     else
         cout << "not present";
