@@ -1,9 +1,10 @@
 # open-source-contribution
 
-<h1 align="center"> JOIN PVX PROGRAMMING GROUP: </h1>
+JOIN PVX PROGRAMMING GROUP:
 
-<h1 align="center"> https://chat.whatsapp.com/EnrPJcdDxw16NcHOV6wrJY </h1>
+ https://chat.whatsapp.com/EnrPJcdDxw16NcHOV6wrJY
 
+---
 
 <h1 align="center"> Hacktoberfest 2021 </h1>
 
@@ -39,6 +40,10 @@
     (if folder is not available for your language then create it by yourself)
     4. commit the code
     5. Make pull request
+    
+
+JOIN OUR WHATSAPP GROUP: https://chat.whatsapp.com/EnrPJcdDxw16NcHOV6wrJY
+
 
 ---
 
