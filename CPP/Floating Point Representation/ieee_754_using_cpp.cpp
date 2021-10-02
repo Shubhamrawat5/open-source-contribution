@@ -1,4 +1,5 @@
 //***FLOATING POINT REPRESENTATION TO BINARY USING C++***
+// SINGLE PRECISION (32 BITS)
 
 #include <iostream>
 #include <math.h>
