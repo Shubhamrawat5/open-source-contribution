@@ -1,12 +1,20 @@
-# open-source-contribution
+<h1 align="center">  Hacktoberfest-2021 - open-source-contribution </h1>
+<p align="center"> An Open Source repository to Teach people How to contribute to open sources.</p>
 
-JOIN PVX PROGRAMMING GROUP:
-
- https://chat.whatsapp.com/EnrPJcdDxw16NcHOV6wrJY
+___<p align="center"> 💥🔥  JOIN PVX PROGRAMMING GROUP: [here]( https://chat.whatsapp.com/EnrPJcdDxw16NcHOV6wrJY) 💥🔥</p>___
+<p align="center">
+  <a href="#">
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+  <a href="https://github.com/Shubhamrawat5/open-source-contribution/commits/main">
+        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Shubhamrawat5/open-source-contribution">
+  </a>
+  <a href="https://github.com/Shubhamrawat5/open-source-contribution/issues">
+        <img alt="GitHub issues" src="https://img.shields.io/github/issues/Shubhamrawat5/open-source-contribution?color=red">
+  </a>
+</p>
 
 ---
-
-<h1 align="center"> Hacktoberfest 2021 </h1>
 
 ![image](https://user-images.githubusercontent.com/64991656/135403993-8436cfd2-5314-4c03-8509-d33e51c565b2.png)
 
