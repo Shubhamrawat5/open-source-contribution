@@ -12,6 +12,10 @@ ___<p align="center"> 💥🔥  JOIN PVX PROGRAMMING GROUP: [here]( https://chat
   <a href="https://github.com/Shubhamrawat5/open-source-contribution/issues">
         <img alt="GitHub issues" src="https://img.shields.io/github/issues/Shubhamrawat5/open-source-contribution?color=red">
   </a>
+  <a href="https://github.com/Shubhamrawat5/open-source-contribution/issues">
+        <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Shubhamrawat5/open-source-contribution?color=blueviolet">
+  </a>
+  
 </p>
 
 ![image](https://user-images.githubusercontent.com/64991656/135403993-8436cfd2-5314-4c03-8509-d33e51c565b2.png)
