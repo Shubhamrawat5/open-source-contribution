@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class PalindromeAString {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+    String s3 = sc.nextLine();
+		boolean isPali = true;
+		int start =0;
+		int end = s3.length()-1;
+		while(start<end) {
+			if(s3.charAt(start)!=s3.charAt(end)){
+				isPali = false;
+				break;
+			}
+			start++;
+			end--;
+		}
+		if(isPali == true) {
+			System.out.println("Is Palindrome.");
+		}
+		else
+			System.out.println("Is not a Palindrome.");
+		sc.close();
+		//
+
+	}
+
+}
