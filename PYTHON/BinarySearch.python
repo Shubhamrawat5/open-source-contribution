@@ -1,0 +1,23 @@
+//)program for iterative binary search
+def binary_search(list1,x):
+  low=0
+  high=len(list1)-1
+  mid=0
+  while low<=high:
+    mid=(high+low)//2
+    if list1[mid]<x:
+      low=mid+1
+    elif list1[mid]>x:
+      high=mid-1
+    else:
+      return mid
+list1=[20,18,5,7,9,64,88,35,12]
+list1.sort()
+print("Sorted list is- ",list1)
+x=int(input("Enter an element to be searched:",))
+ans=binary_search(list1,x)
+
+if ans!=-1:
+  print("Element is found at index, ",str(ans))
+else:
+  print("Element not found”)
