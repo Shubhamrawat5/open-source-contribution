@@ -1,0 +1,36 @@
+#include<iostream>
+#include <conio.h>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    float a,b,c,d,r1,r2,R,I;
+    cout<<"Enter the Coefficients of x^2, x, c\n";
+    cin>>a>>b>>c;
+    d= b*b-4*a*c; //discriminant
+
+    if(d>0)
+    {
+        r1=(-b+sqrt(d))/2*a;
+        r2=(-b-sqrt(d))/2*a;
+        cout<<"Roots of the equation are: "<<r1<<" and "<<r2;
+    }
+
+    if(d<0)
+    {
+        R=-b/2*a;
+        I=sqrt(-d)/2*a;
+        cout<<"Roots of the equation are: "<<R<<"+"<<I<<"i"<<" and "<<R<<"-"<<I<<"i";
+    }
+
+    if(d==0)
+    {
+        r1= -b/(2*a);
+        r2=r1;
+        cout<<"Roots of the equation are: "<<r1<<" and "<<r2;
+    }
+
+    return 0;
+}
