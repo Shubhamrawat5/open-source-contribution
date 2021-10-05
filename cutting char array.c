@@ -11,6 +11,4 @@ void main()
     char arr[11]="helloworld";
     cut(3, arr);  
 } 
-//output
-helloworld
-hello
+
