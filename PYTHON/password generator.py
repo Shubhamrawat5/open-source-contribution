@@ -1,65 +1,46 @@
-import string
+#Password Generator Project
 import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
+print("Welcome to the PyPassword Generator!")
+nr_letters = int(input("How many letters would you like in your password?\n"))
+nr_symbols = int(input(f"How many symbols would you like?\n"))
+nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-## characters to generate password from
-alphabets = list(string.ascii_letters)
-digits = list(string.digits)
-special_characters = list("!@#$%^&*()")
-characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
+#Eazy Level
+# password = ""
 
-def generate_random_password():
-	## length of password from the user
-	length = int(input("Enter password length: "))
+# for char in range(1, nr_letters + 1):
+#   password += random.choice(letters)
 
-	## number of character types
-	alphabets_count = int(input("Enter alphabets count in password: "))
-	digits_count = int(input("Enter digits count in password: "))
-	special_characters_count = int(input("Enter special characters count in password: "))
+# for char in range(1, nr_symbols + 1):
+#   password += random.choice(symbols)
 
-	characters_count = alphabets_count + digits_count + special_characters_count
+# for char in range(1, nr_numbers + 1):
+#   password += random.choice(numbers)
 
-	## check the total length with characters sum count
-	## print not valid if the sum is greater than length
-	if characters_count > length:
-		print("Characters total count is greater than the password length")
-		return
+# print(password)
 
+#Hard Level
+password_list = []
 
-	## initializing the password
-	password = []
-	
-	## picking random alphabets
-	for i in range(alphabets_count):
-		password.append(random.choice(alphabets))
+for char in range(1, nr_letters + 1):
+  password_list.append(random.choice(letters))
 
+for char in range(1, nr_symbols + 1):
+  password_list += random.choice(symbols)
 
-	## picking random digits
-	for i in range(digits_count):
-		password.append(random.choice(digits))
+for char in range(1, nr_numbers + 1):
+  password_list += random.choice(numbers)
 
+print(password_list)
+random.shuffle(password_list)
+print(password_list)
 
-	## picking random alphabets
-	for i in range(special_characters_count):
-		password.append(random.choice(special_characters))
+password = ""
+for char in password_list:
+  password += char
 
-
-	## if the total characters count is less than the password length
-	## add random characters to make it equal to the length
-	if characters_count < length:
-		random.shuffle(characters)
-		for i in range(length - characters_count):
-			password.append(random.choice(characters))
-
-
-	## shuffling the resultant password
-	random.shuffle(password)
-
-	## converting the list to string
-	## printing the list
-	print("".join(password))
-
-
-
-## invoking the function
-generate_random_password()
+print(f"Your password is: {password}")
