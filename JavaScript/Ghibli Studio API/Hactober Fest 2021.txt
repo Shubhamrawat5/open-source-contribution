@@ -1,0 +1,2 @@
+A Small webapp to Generate a list of Ghibli Studio movies using Ghibli API.
+A small contribution to Hactober Fest 2021
