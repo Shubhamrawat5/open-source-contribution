@@ -1,4 +1,4 @@
-# Quick sort in Python
+# Quick sort in Python.
 
 def partition(array, a, b):
 
@@ -34,3 +34,4 @@ quickSort(dataArray, 0, size - 1)
 
 print('After Sort')
 print(dataArray)
+# its good and working fine.
