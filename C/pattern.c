@@ -1,20 +1,24 @@
-#include <stdio.h>
-int main(void)
-{
- int n;
- printf("Enter number of rows and columns");
- scanf("%d", &n);
- for(int i=n;i>0;i--)
- {
- for(int j=1;j<i;j++)
- {
- printf(" ");
- }
- for(int k=i;k<=n;k++)
- {
- printf("%d", k);
- }
- printf("\n");
- }
- return 0;
+#include <stdio.h>  
+  
+int main()  
+{  
+    int n,m;  
+    printf("Enter the number of rows");  
+    scanf("%d",&n);  
+    m=n;  
+   for(int i=1;i<=n;i++)  
+   {  
+       for(int j=1;j<i;j++)  
+       {  
+           printf(" ");  
+       }  
+       for(int k=1;k<=m;k++)  
+       {  
+           printf("*");  
+       }  
+       m--;  
+     
+      printf("\n");  
+    }  
+    return 0;  
 }
