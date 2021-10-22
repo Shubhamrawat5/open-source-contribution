@@ -1,0 +1,17 @@
+binarydivisor = 128
+binaryvalue = ""
+i = 0
+decimalval = int(input("What decimal value would you like to convert to binary?"))
+while not (i == 8):
+  i = i + 1
+  if decimalval > binarydivisor:
+    decimalval = decimalval - binarydivisor
+    binaryvalue = binaryvalue + "1"
+  elif decimalval == binarydivisor:
+    decimalval = decimalval - binarydivisor
+    binaryvalue = binaryvalue + "1"
+  else:
+    binaryvalue = binaryvalue + "0"
+  
+  binarydivisor = binarydivisor/2
+print (binaryvalue)
