@@ -65,6 +65,6 @@ JOIN OUR WHATSAPP GROUP: https://chat.whatsapp.com/EnrPJcdDxw16NcHOV6wrJY
 
 <h2 align="center">
     <p>
-        Thank You
+        Thanks You!
     </p>
 </h2>
