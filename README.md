@@ -60,11 +60,11 @@ JOIN OUR WHATSAPP GROUP: https://chat.whatsapp.com/EnrPJcdDxw16NcHOV6wrJY
 ## :handshake: Our Contributors
 
 <a href="https://github.com/Shubhamrawat5/open-source-contribution/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Shubhamrawat5/open-source-contribution&max=120" />
+  <img src="https://contrib.rocks/image?repo=Shubhamrawat5/open-source-contribution&max=180" />
 </a>
 
 <h2 align="center">
     <p>
-        Thank You
+        Thanks You!
     </p>
 </h2>

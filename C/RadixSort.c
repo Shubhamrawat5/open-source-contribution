@@ -1,3 +1,12 @@
+//Intoduction
+// Radix sort is a sorting algorithm that sorts the elements by first grouping the individual digits of 
+// the same place value. Then, sort the elements according to their increasing/decreasing order.
+
+//Time complexity
+//Best case:      O(n+k)
+//Worst case:     O(n+k)
+//Average case:   O(n+k)
+
 // Radix Sort in C Programming
 
 #include <stdio.h>
@@ -63,8 +72,9 @@ void printArray(int array[], int size) {
 
 // Driver code
 int main() {
-  int array[] = {15, -9, 32,110, 502, 21, 12, 90, 109,33};
+  int array[] = {121, 432, 564, 23, 1, 45, 788};
   int n = sizeof(array) / sizeof(array[0]);
   radixsort(array, n);
   printArray(array, n);
 }
+

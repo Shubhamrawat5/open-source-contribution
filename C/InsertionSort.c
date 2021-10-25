@@ -1,8 +1,19 @@
+// Intoduction
+// Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a time. 
+// It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
+
+// Time complexity
+// Best case:      O(n)
+// Average case:   O(n^2)
+// Worst case:     O(n^2)
+
+// Insertion Sort in C programming
+
 // C program for insertion sort
 #include <math.h>
 #include <stdio.h>
 
-/* Function to sort an array using insertion sort*/
+// Function to sort an array using insertion sort
 void insertionSort(int arr[], int n)
 {
 	int i, key, j;
@@ -33,15 +44,10 @@ void printArray(int arr[], int n)
 /* Driver program to test insertion sort */
 int main()
 {
-	int arr[] = {2, 16, 20, 14, 9, 96, 87};
-	int i;
-	printf("Before Sorted Array is\n");
+	int arr[] = { 12, 11, 13, 5, 6 };
 	int n = sizeof(arr) / sizeof(arr[0]);
-    for(i=0;i<n;i++){
-        printf("\t%d",arr[i]);
-    }
+
 	insertionSort(arr, n);
-	printf("\nThe sorted array is\n");
 	printArray(arr, n);
 
 	return 0;

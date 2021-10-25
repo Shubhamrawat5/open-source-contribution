@@ -1,0 +1,37 @@
+# Quick sort in Python.
+
+def partition(array, a, b):
+
+  p = array[b]
+
+  i = a - 1
+
+  for j in range(a, b):
+    if array[j] <= p:
+      i = i + 1
+
+      (array[i], array[j]) = (array[j], array[i])
+
+  (array[i + 1], array[b]) = (array[b], array[i + 1])
+
+  return i + 1
+
+def quickSort(array, a, b):
+  if a < b:
+
+    pi = partition(array, a, b)
+    quickSort(array, a, pi - 1)
+    quickSort(array, pi + 1, b)
+
+
+dataArray = [8, 7, 2, 1, 0, 9, 6]
+print("Before Sort")
+print(dataArray)
+
+size = len(dataArray)
+
+quickSort(dataArray, 0, size - 1)
+
+print('After Sort')
+print(dataArray)
+# its good and working fine.

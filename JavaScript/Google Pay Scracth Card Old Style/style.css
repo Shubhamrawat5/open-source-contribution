@@ -1,0 +1,24 @@
+body {
+  padding: 20px 0;
+}
+
+.container {
+  position: center;
+  width: 578px;
+  height: 578px;
+  margin: 0 auto;
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  -o-user-select: none;
+  user-select: none;
+}
+ 
+.canvas {
+  position: absolute;
+  top: 0;
+}
+
+.form {
+  padding: 20px;
+}
