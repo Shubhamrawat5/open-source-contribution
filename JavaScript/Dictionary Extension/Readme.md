@@ -3,7 +3,7 @@ https://dictionaryapi.dev/
 
 Directions of use:
 
-1. chrome://extensions/
+1. Open chrome://extensions/
 2. Switch on the developer mode through an option given on top right corner.
 3. Now, we can add extensions created by our own selves.
 4. Click on "Load Unpacked" on top left corner below the top bar.
