@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: block;
+}
+input, select, button {
+    margin: 20px;
+    padding: 20px;
+}
+
+input {
+    border-radius: 5px;
+    line-height: normal;
+    outline: none;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+p {
+    display: block;
+}
+
+var {
+	font-weight: bold;
+	color:white;
+}

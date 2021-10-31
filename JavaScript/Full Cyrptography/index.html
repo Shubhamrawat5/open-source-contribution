@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="./jquery.js"></script>
+    <title>Crypto-security</title>
+</head>
+<body class="container p-3 my-3 bg-dark text-white container-md">
+    <input placeholder="Input your text" id="inp" class="form-control-plaintext bg-primary" type="text">
+    <input placeholder="Steps" type="number" class="form-control" id="spsize">
+    <select name="Techniques" class="form-control" id="techniques-cont">
+        <option onclick="key_control();" id="caesar" value="caesar" class="techniques">Caesar Technique</option>
+        <option onclick="key_control();" id="basic_slide" value="basic_slide" class="techniques">Basic Sliding Technique</option>
+        <option onclick="key_control();" id="subs_cipher" value="subs_cipher" class="techniques">Substitution Cipher Technique</option>
+        <option onclick="key_control();" id="affine_cipher" value="affine_cipher" class="techniques">Affine Cipher Technique</option>
+        <option onclick="key_control();" id="pig_latin" value="pig_latin" class="techniques">Pig Latin Technique</option>
+        <option onclick="key_control();" id="morse_d" value="morse_d" class="techniques">Morse Decode</option>
+        <option onclick="key_control();" id="morse_e" value="morse_e" class="techniques">Morse Encode</option>
+		    <option onclick="key_control();" id="rot13" value="rot13" class="techniques">ROT-13 Technique</option>
+        <option onclick="key_control();" id="base64" value="base64" class="techniques">Base64 Encoding</option>
+    </select>
+    <button id="convert" class="btn btn-primary">Convert</button>
+    <input placeholder="Type a 26 charactered key"type="text" style="display: none" name="Substitution Chiper Key" id="subs_key">
+    <input style="display: none" id="inp_a" type="number" placeholder="a">
+    <input style="display: none" id="inp_b" type="number" placeholder="b">
+	<select style="display: none" name="rot13mode" id="rot13mode">
+		<option id="enc" value="e">Encryption</option>
+		<option id="dec" value="d">Decyrption</option>
+	</select>
+    <p style="display: none; text-align: left; padding: 20px;" class="text-warning" id="info"><span>You need to give values to <var>a</var> and <var>b</var> by looking to the formula: <var>y</var>=<var>ax</var>+<var>b</var>.</span><span><br> <var>y</var> is the place of the output character, <var>a</var> and <var>b</var> are your inputs and <var>x</var> is the place of the input (will be encrypted) character. </span></p>
+    <p id="output" style="text-align: left; padding:20px; font-size: 30px;"class="text-success"></p>
+    <script src="apt.js"></script>
+</body>
+</html>
