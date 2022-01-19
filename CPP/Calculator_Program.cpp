@@ -45,3 +45,4 @@ float a, b, res;
 		cout<<"\n------------------------------------\n";
 	}while(choice!=5 && choice!=getchar());
 }
+#Coded with 💙 by Krish Chopra
