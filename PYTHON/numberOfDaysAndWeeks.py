@@ -11,10 +11,13 @@ def retrieveWeeksAndDays(num):
     elif num < 7:
         days = num
         return f"{days} days"
-    else:
+    elif num % 7 > 0 :
         days = num % 7
         weeks = num // 7
         return f"{weeks} weeks ,{days} days"
+    else:
+        weeks = num // 7
+        return f"{weeks} weeks"
 
 
 results = retrieveWeeksAndDays(7)
