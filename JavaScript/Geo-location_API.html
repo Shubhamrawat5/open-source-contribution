@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<style>
+*{
+  padding:8px; 
+ }
+ p{
+   color:green;
+   margin:10px;
+ }
+ button{
+ border-radius:6px;
+ }
+ button:hover{
+ border :none;
+ }
+</style>
+<body>
+<h1>HTML Geolocation</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Find Me</button>
+
+<p id="d"></p>
+
+<script>
+const x = document.getElementById("d");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
+
