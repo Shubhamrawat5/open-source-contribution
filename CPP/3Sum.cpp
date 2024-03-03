@@ -1,48 +1,30 @@
-//Leetcode Probelem statement: https://leetcode.com/problems/3sum/
-//runtime: 52 ms
-
 class Solution {
 public:
-vector<vector<int>> threeSum(vector<int>& nums) {
-        
-        if(nums.size() < 3)
-            return {};
-        
-        int n = nums.size();
-        
-        // Sort the nums[]
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> result;
         sort(nums.begin(), nums.end());
-        vector <vector<int>> ans;
-        
-        int first, second, third;
-        
-        for(int i = 0; i < n; i++) 
-        {
 
-            first = nums[i];
-            int left = i + 1, right = n - 1;
-          
-            while(left < right)
-            {                
-                second = nums[left];
-                third = nums[right];               
-                if(first + second + third == 0) 
-                {
-                    ans.push_back({first, second, third});
-                    while(left <= right && second == nums[left])
-                        left++;
-                    while(right >= left && third == nums[right])
-                        right--;
-                }
-                else if(first + second + third < 0)
-                    left++;    
-                else
-                    right--;
+        for (int i = 0; i < nums.size(); i++) {
+            if (i != 0 && nums[i] == nums[i-1]) {
+                continue;
             }
-            
-            while(i < n-1 && nums[i] == nums[i+1])
-                i++;
+            int j = i + 1;
+            int k = nums.size() - 1;
+            while (j < k) {
+                if (nums[i] + nums[j] + nums[k] == 0) {
+                    // handle pointers here
+                    result.push_back({nums[i], nums[j], nums[k]});
+                    j++;
+                    while (j < k && nums[j] == nums[j-1]) {
+                        j++;
+                    }
+                } else if (nums[i] + nums[j] + nums[k] < 0) {
+                    j++;
+                } else {
+                    k--;
+                }
+            }
         }
-        return ans;
+        return result;
     }
 };
