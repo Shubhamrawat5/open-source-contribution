@@ -1,46 +1,47 @@
-#Password Generator Project
 import random
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+import string
 
-print("Welcome to the PyPassword Generator!")
-nr_letters = int(input("How many letters would you like in your password?\n"))
-nr_symbols = int(input(f"How many symbols would you like?\n"))
-nr_numbers = int(input(f"How many numbers would you like?\n"))
+def generate_password(length, include_uppercase=False, include_symbols=True, include_numbers=True):
+    password_characters = string.ascii_lowercase
+    if include_uppercase:
+        password_characters += string.ascii_uppercase
+    if include_symbols:
+        password_characters += string.punctuation
+    if include_numbers:
+        password_characters += string.digits
 
-#Eazy Level
-# password = ""
+    password = ''.join(random.choice(password_characters) for _ in range(length))
 
-# for char in range(1, nr_letters + 1):
-#   password += random.choice(letters)
+    # Ensure at least one character of each type is included
+    if include_uppercase:
+        password = password[:random.randint(0, length-3)] + random.choice(string.ascii_uppercase) + password[random.randint(0, length-2):]
+    if include_symbols:
+        password = password[:random.randint(0, length-3)] + random.choice(string.punctuation) + password[random.randint(0, length-2):]
+    if include_numbers:
+        password = password[:random.randint(0, length-3)] + random.choice(string.digits) + password[random.randint(0, length-2):]
 
-# for char in range(1, nr_symbols + 1):
-#   password += random.choice(symbols)
+    return password
 
-# for char in range(1, nr_numbers + 1):
-#   password += random.choice(numbers)
+def main():
+    print("Welcome to the PyPassword Generator!")
 
-# print(password)
+    while True:
+        try:
+            num_passwords = int(input("How many passwords would you like to generate?\n"))
+            password_length = int(input("Enter the length of the password:\n"))
+            include_uppercase = input("Include uppercase letters? (yes/no): ").lower() == "yes"
+            include_symbols = input("Include symbols? (yes/no): ").lower() == "yes"
+            include_numbers = input("Include numbers? (yes/no): ").lower() == "yes"
 
-#Hard Level
-password_list = []
+            for _ in range(num_passwords):
+                password = generate_password(password_length, include_uppercase, include_symbols, include_numbers)
+                print(f"Generated Password: {password}")
+            
+            another_generation = input("Generate more passwords? (yes/no): ").lower()
+            if another_generation != "yes":
+                break
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
 
-for char in range(1, nr_letters + 1):
-  password_list.append(random.choice(letters))
-
-for char in range(1, nr_symbols + 1):
-  password_list += random.choice(symbols)
-
-for char in range(1, nr_numbers + 1):
-  password_list += random.choice(numbers)
-
-print(password_list)
-random.shuffle(password_list)
-print(password_list)
-
-password = ""
-for char in password_list:
-  password += char
-
-print(f"Your password is: {password}")
+if __name__ == "__main__":
+    main()
