@@ -1,3 +1,5 @@
+import string
+
 def print_rangolli(n):
     rows = []
     for i in range(n):
