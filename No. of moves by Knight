@@ -1,0 +1,25 @@
+Program for No. of moves by Knight can make.
+Given an 8*8 empty chessboard in which a knight is placed at a position (X, Y). Your task is to find the number of positions in the chessboard knight can jump into in a single move .
+Note:- Rows and Columns are numbered through 1 to N.
+Input:-
+Knight() that take integers X and Y as arguments.
+Constraints:-
+1 <= X <= 8
+1 <= Y <= 8
+Output:-
+Return the number of positions Knight can jump into in a single move.
+
+python code:-
+def Knight(X,Y):
+    moves = [(2, 1), (2, -1), (-2, 1), (-2, -1),(1, 2), (1, -2), (-1, 2), (-1, -2)]
+    valid_moves = 0
+    
+    for move in moves:
+        newX = X + move[0]
+        newY = Y + move[1]
+        if 1 <= newX <= 8 and 1 <= newY <= 8:
+            valid_moves += 1
+    
+    return valid_moves
+X,Y=map(int,input().split())
+print(Knight(X,Y))
