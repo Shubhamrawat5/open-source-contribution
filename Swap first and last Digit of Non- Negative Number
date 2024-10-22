@@ -1,0 +1,30 @@
+It is a program to swap first and last digit of number.
+
+You are given a non-negative integer number num and need swap the first and last digits of the number.
+Complete the function swap_first_last(num) that takes a single parameter: num. It swaps the first and last digit of num and returns the resultant number.
+
+Input:-
+The first line contains the integer num.
+
+Constraints:-
+10 <= num <= 1025
+
+Output:-
+Print a single integer, result after swapping the first and last digits of num.
+You are only expected to return the result, do not print it.
+
+python code for that-
+def swap_first_last(num):
+    x=num%10
+    temp=num
+    count=0 
+    while temp>0:
+        c=temp%10
+        count=count+1
+        temp=temp//10
+    y=num//(10**(count-1))
+    z=num%(10**(count-1))
+    result=x*(10**(count-1))+z-(x-y)
+    return result
+num=int(input())
+print(swap_first_last(num))
