@@ -1,0 +1,6 @@
+a,b,c=map(int,input().split())
+add = a*pow(2,2) + b*pow(2,1) + c
+if add==1 or add==2 or add==4:
+    print("Yes! Ship Unlocked.")
+else:
+    print("No! Better luck next time.")
