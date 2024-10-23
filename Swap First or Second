@@ -1,0 +1,18 @@
+def length(N):
+    count=0
+    while N > 0:
+        N//=10
+        count+=1
+    return count
+
+def swap_first_two_digits(N):
+    l=length(N)
+    digit1 = N // 10**(l-1)
+    x = N // 10**(l-2)
+    digit2 = x%10
+    swapc=digit1
+    digit1=digit2
+    digit2=swapc
+    result=digit1*(10**(l-1))+digit2*(10**(l-2))+(N%(10**(l-2)))
+
+    return result
