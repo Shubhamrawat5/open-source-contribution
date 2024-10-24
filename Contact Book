@@ -1,0 +1,12 @@
+contacts = {}
+
+def add_contact(name, phone):
+    contacts[name] = phone
+
+def show_contacts():
+    for name, phone in contacts.items():
+        print(f"{name}: {phone}")
+
+add_contact("Alice", "123-456-7890")
+add_contact("Bob", "987-654-3210")
+show_contacts()
