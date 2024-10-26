@@ -1,0 +1,16 @@
+It is the program to for playing matchsticks game where you are allowed to select matchstick form 1 to 4 and print the pattern on which positions to avoid to for winning the game.
+Input-contain single line Integer.
+output-print the list pattern of winning and loosing positions.
+n=int(input())
+result=["L"]
+for i in range (1,n):
+    count=0
+    for j in range(1,5):
+        if i-j>=0 and  i-j == "L":
+            result.append("W")
+            break
+        elif i-j>=0:
+            count+=1
+    if count==4:
+        result.append("L")
+print(result)
