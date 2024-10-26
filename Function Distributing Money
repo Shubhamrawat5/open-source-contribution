@@ -1,0 +1,21 @@
+Question:
+Mahesh wants to distribute the money among his three sisters. His sisters already have some money with them. Let's say they have x, y, z amount of money. Now mahesh wants to distribute his money such that all the sisters have the same amount of total money left with them. Your task is to check if it is possible to distribute the money as Mahesh wants.
+
+User Task:
+Input consists of a single line mentioning values x, y, z, and K
+
+Constraints:
+0 <= x, y, z, K <= 10^7
+
+Output:
+Return 1 if possible else return 0.
+
+Solution:
+import math
+def distributingMoney(x,y,z,k) :
+    if (x+y+z+k)%3==0 and x<=(x+y+z+k)/3 and y<=(x+y+z+k)/3 and z<=(x+y+z+k)/3:
+        return 1
+    else:
+        return 0
+x,y,z,k= map(int,input().split());
+print (int(distributingMoney(x,y,z,k)))
