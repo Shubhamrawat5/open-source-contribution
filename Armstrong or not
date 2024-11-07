@@ -1,0 +1,34 @@
+Question:
+You are given a number. Your task is to check if this number is an Armstrong number.
+
+What is an armstrong number?
+An Armstrong number  is a number that is equal to the sum of its own digits, each raised to the power of the number of digits.
+
+User Task:
+This is a function problem. You don't have to take any input. You are required to complete the function isArmstrong() that takes an integer N as a parameter and returns True if the number is an Armstrong number, otherwise returns False.
+
+Input:
+First line will contain an Integer N.
+Output:
+Return True if the number is Armstrong, otherwise return False.
+
+
+Solution:
+def length(N):
+    count = 0
+    while N > 0:
+        N //= 10
+        count += 1
+    return count
+
+def isArmstrong(N):
+    power = length(N)
+    sum_of_powers = 0
+    temp = N
+
+    while temp > 0:
+        digit = temp % 10
+        sum_of_powers += digit ** power
+        temp //= 10
+
+    return N == sum_of_powers
