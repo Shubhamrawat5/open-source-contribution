@@ -5,6 +5,7 @@ public class Array {
         int marks[] = new int[5];
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
+            System.out.print("Enter number:");
             marks[i] = sc.nextInt();
         }
         

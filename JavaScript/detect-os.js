@@ -1,5 +1,5 @@
 # Run it in browser
-var Name = "Not known"; 
+let Name = "Not known"; 
 if (navigator.platform.indexOf('Win32', 'Win64', 'Windows', 'WinCE') != -1) Name =  
   "Windows"; 
 if (navigator.platform.indexOf('Macintosh', 'MacIntel', 'MacPPC', 'Mac68K') != -1) Name =  
