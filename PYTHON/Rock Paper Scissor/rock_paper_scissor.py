@@ -37,7 +37,7 @@ def play():
                 c_score+=1
                 print("\nComputer wins!!!")
         else:
-            print("\nPlease enter choice between['rock','paper','season']")
+            print("\nPlease enter choice between['rock','paper','scissor']")
             print("\nNeed to restart program again....")
             exit()
         print(f"\nplayer score:{p_score} || computer score:{c_score}")
