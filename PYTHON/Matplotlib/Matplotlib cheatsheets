@@ -1,0 +1,256 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+#Basic Plot types: 
+
+# Create a figure and axes
+fig, ax = plt.subplots()
+
+# Create multiple subplots
+fig, (ax1, ax2) = plt.subplots(1, 2)
+fig, axes = plt.subplots(2, 3)  # 2 rows, 3 columns
+
+# Create figure with specific size
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Create new figure
+plt.figure()
+plt.figure(figsize=(8, 6))
+
+#Line Plots
+plt.plot(x, y)
+plt.plot(x, y, 'r-')  # red solid line
+plt.plot(x, y, 'bo--')  # blue circles with dashed line
+plt.plot(x, y, linewidth=2, label='Data')
+ax.plot(x, y)
+
+#scatter plots
+plt.scatter(x, y)
+plt.scatter(x, y, s=50, c='red', marker='o', alpha=0.5)
+ax.scatter(x, y)
+
+#Bar charts
+plt.bar(x, height)
+plt.barh(y, width)  # horizontal bar
+plt.bar(x, height, width=0.8, color='blue', edgecolor='black')
+ax.bar(x, height)
+
+#Histograms
+plt.hist(data, bins=30)
+plt.hist(data, bins=20, alpha=0.7, color='green', edgecolor='black')
+ax.hist(data)
+
+#pie charts
+plt.pie(sizes, labels=labels)
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+ax.pie(sizes)
+
+#Box Plots
+pythonplt.boxplot(data)
+plt.boxplot([data1, data2, data3], labels=['A', 'B', 'C'])
+ax.boxplot(data)
+
+#Violin Plots
+pythonplt.violinplot(data)
+ax.violinplot(data)
+
+#Area Plots
+pythonplt.fill_between(x, y1, y2, alpha=0.3)
+plt.stackplot(x, y1, y2, y3, labels=['A', 'B', 'C'])
+ax.fill_between(x, y)
+
+#Contour Plots
+pythonplt.contour(X, Y, Z)
+plt.contourf(X, Y, Z)  # filled contour
+plt.contour(X, Y, Z, levels=10, cmap='viridis')
+ax.contour(X, Y, Z)
+
+#Heatmaps
+pythonplt.imshow(data, cmap='hot', interpolation='nearest')
+plt.pcolor(data)
+plt.pcolormesh(X, Y, Z)
+ax.imshow(data)
+
+#3D Plots
+pythonfrom mpl_toolkits.mplot3d import Axes3D
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.plot3D(x, y, z)
+ax.scatter3D(x, y, z)
+ax.plot_surface(X, Y, Z)
+ax.plot_wireframe(X, Y, Z)
+
+#Error Bars
+pythonplt.errorbar(x, y, yerr=error, fmt='o-')
+plt.errorbar(x, y, xerr=xerror, yerr=yerror, capsize=5)
+ax.errorbar(x, y, yerr=error)
+
+#Step Plots
+pythonplt.step(x, y)
+plt.step(x, y, where='mid')
+ax.step(x, y)
+
+#Stem Plots
+pythonplt.stem(x, y)
+ax.stem(x, y)
+
+#Quiver Plots (Vector Fields)
+pythonplt.quiver(X, Y, U, V)
+ax.quiver(X, Y, U, V)
+
+#Stream Plots
+pythonplt.streamplot(X, Y, U, V)
+ax.streamplot(X, Y, U, V)
+
+
+#Customization Commands
+
+#Labels and Titles
+pythonplt.title('Title')
+plt.xlabel('X Label')
+plt.ylabel('Y Label')
+plt.suptitle('Figure Title')
+
+ax.set_title('Title')
+ax.set_xlabel('X Label')
+ax.set_ylabel('Y Label')
+
+
+#Legends
+pythonplt.legend()
+plt.legend(loc='upper right')
+plt.legend(loc='best', frameon=False, fontsize=12)
+ax.legend()
+
+#Grid
+pythonplt.grid()
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.grid(axis='x')  # only x-axis grid
+ax.grid()
+
+#Limits
+pythonplt.xlim(0, 10)
+plt.ylim(-5, 5)
+plt.axis([xmin, xmax, ymin, ymax])
+
+ax.set_xlim(0, 10)
+ax.set_ylim(-5, 5)
+
+#Scales
+pythonplt.xscale('log')
+plt.yscale('log')
+plt.xscale('linear')
+
+ax.set_xscale('log')
+ax.set_yscale('log')
+
+#Ticks
+pythonplt.xticks([0, 1, 2, 3], ['A', 'B', 'C', 'D'])
+plt.yticks(rotation=45)
+plt.tick_params(axis='x', labelsize=10)
+
+ax.set_xticks([0, 1, 2])
+ax.set_xticklabels(['A', 'B', 'C'])
+ax.tick_params(labelsize=12)
+
+#Color and Style
+python# Colors: 'r', 'g', 'b', 'c', 'm', 'y', 'k', 'w' or hex codes
+# Line styles: '-', '--', '-.', ':'
+# Markers: 'o', 's', '^', 'v', '*', '+', 'x', 'D'
+
+plt.plot(x, y, color='red', linestyle='--', marker='o')
+plt.plot(x, y, 'ro--')  # shorthand
+
+#Colormaps
+pythonplt.colorbar()
+plt.colorbar(label='Color Scale')
+plt.set_cmap('viridis')
+
+# Common colormaps: 'viridis', 'plasma', 'inferno', 'magma', 'hot', 'cool', 'jet', 'rainbow'
+#Text and Annotations
+pythonplt.text(x, y, 'text', fontsize=12)
+plt.annotate('annotation', xy=(x, y), xytext=(x2, y2), arrowprops=dict(arrowstyle='->'))
+ax.text(x, y, 'text')
+ax.annotate('annotation', xy=(x, y))
+
+#Spines
+pythonax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_color('red')
+
+#Layout and Display
+python# Adjust layout
+plt.tight_layout()
+plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
+
+# Display plot
+plt.show()
+
+# Save figure
+plt.savefig('plot.png')
+plt.savefig('plot.png', dpi=300, bbox_inches='tight', transparent=True)
+
+# Clear current figure/axes
+plt.clf()  # clear figure
+plt.cla()  # clear axes
+
+# Close figures
+plt.close()
+plt.close('all')
+
+#Style and Themes
+#Use style sheets
+plt.style.use('ggplot')
+# Available styles: 'default', 'classic', 'seaborn', 'ggplot', 'bmh', 'dark_background', 'fivethirtyeight'
+
+# List available styles
+print(plt.style.available)
+
+# Temporarily use a style
+with plt.style.context('dark_background'):
+    plt.plot(x, y)
+
+
+#Additional Useful Commands
+#Invert axes
+plt.gca().invert_xaxis()
+plt.gca().invert_yaxis()
+ax.invert_xaxis()
+
+# Aspect ratio
+ax.set_aspect('equal')
+plt.axis('equal')
+
+# Twin axes (two y-axes)
+ax2 = ax.twinx()
+ax3 = ax.twiny()
+
+# Get current figure/axes
+fig = plt.gcf()  # get current figure
+ax = plt.gca()   # get current axes
+
+# Add subplot to existing figure
+ax = fig.add_subplot(111)
+Figure Export Formats
+Supported formats: .png, .jpg, .pdf, .svg, .eps, .ps, .tif
+
+=======================================================================================================================================
+#Quick Example
+pythonimport matplotlib.pyplot as plt
+import numpy as np
+
+# Create data
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# Create plot
+plt.figure(figsize=(10, 6))
+plt.plot(x, y, 'b-', linewidth=2, label='sin(x)')
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Simple Sine Wave')
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.savefig('sine_wave.png', dpi=300)
+plt.show()
